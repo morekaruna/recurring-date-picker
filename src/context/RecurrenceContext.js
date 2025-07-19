@@ -1,9 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
-// Create Context
 const RecurrenceContext = createContext();
 
-// Custom Hook
 export const useRecurrence = () => useContext(RecurrenceContext);
 
 // Provider Component
@@ -16,7 +14,7 @@ export const RecurrenceProvider = ({ children }) => {
     day: "Tuesday"
   }); // for monthly
   const [startDate, setStartDate] = useState(""); // string yyyy-mm-dd
-  const [endDate, setEndDate] = useState(""); // optional
+  const [endDate, setEndDate] = useState(""); 
 
   return (
     <RecurrenceContext.Provider
